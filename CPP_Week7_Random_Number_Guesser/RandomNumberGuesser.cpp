@@ -1,8 +1,8 @@
 #include "RandomNumberGuesser.h"
-#include <cstdlib> //used for Rand(), 
+#include <cstdlib> 
 #include <iostream>
-#include <ctime> //used to make time() work
-#include <cmath> //math library
+#include <ctime> 
+#include <cmath> 
 using namespace std;
 void RandomNumberGuesser::guessRandomNumber()
 {
@@ -15,8 +15,9 @@ void RandomNumberGuesser::guessRandomNumber()
 
 	//generate a random number to guess 
 	int randN = rand() % (max - min + 1) + min;
-    cout << randN;
+
 	int guess;
+
 	int attempts = 0;
 
 	// welcome message
@@ -33,7 +34,7 @@ void RandomNumberGuesser::guessRandomNumber()
         attempts++;
 
         if (guess < 1 || guess > 100) {
-            //over correction Testing
+            //over value Testing
             cout << "Please enter a number between 1 and 100." << endl;
         }
         else if (guess < randN) {
